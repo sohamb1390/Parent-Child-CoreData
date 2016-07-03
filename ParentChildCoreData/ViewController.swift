@@ -50,7 +50,6 @@ class ViewController: UIViewController {
         fetchRequest.entity = entityDescription
         let sortDesc = NSSortDescriptor(key: "pName", ascending: true)
         fetchRequest.sortDescriptors = [sortDesc]
-        fetchRequest.fetchLimit = 100
         do {
             if let resultArray:[Product] = try self.mainMOC!.executeFetchRequest(fetchRequest) as? [Product] {
                 self.arrProducts = resultArray
